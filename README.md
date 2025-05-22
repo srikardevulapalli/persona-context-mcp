@@ -1,55 +1,55 @@
-# Persona Context Manager
+# 🎭 Persona Context Manager
 
 Developed by Srikar Devulapalli
 
 A powerful tool for managing and maintaining user personas and context information, designed to work seamlessly with Claude Desktop and other AI assistants.
 
-## Overview
+## 📋 Overview
 
 The Persona Context Manager is a sophisticated system that allows you to:
-- Store and manage detailed user personas
-- Maintain context about users across conversations
-- Integrate with Claude Desktop for enhanced AI interactions
-- Provide a beautiful, modern web interface for managing personas
+- 📝 Store and manage detailed user personas
+- 🔄 Maintain context about users across conversations
+- 🤖 Integrate with Claude Desktop for enhanced AI interactions
+- 🎨 Provide a beautiful, modern web interface for managing personas
 
-## Features
+## ✨ Features
 
-### 1. Persona Management
+### 1. 👤 Persona Management
 - Create and maintain detailed user profiles
 - Store categorized facts about users
 - Add descriptions and metadata to persona information
 - Import/export persona data in JSON format
 
-### 2. Claude Desktop Integration
+### 2. 🤖 Claude Desktop Integration
 - Seamlessly connect with Claude Desktop
 - Access persona information during conversations
 - Get context-aware responses based on stored user information
 - Natural language queries for persona information
 
-### 3. Modern Web Interface
+### 3. 🎨 Modern Web Interface
 - Beautiful, responsive UI built with Streamlit
 - Real-time updates and animations
 - Easy-to-use persona management tools
 - Visual representation of user information
 
-### 4. MCP Server
+### 4. 🚀 MCP Server
 - Fast and efficient API endpoints
 - Natural language processing for queries
 - Secure data storage
 - Extensible architecture
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 - Python 3.8 or higher
 - pip (Python package manager)
 - Claude Desktop installed and configured
 
-### Installation
+### 💻 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/persona-context-mcp.git
+git clone https://github.com/srikardevulapalli/persona-context-mcp.git
 cd persona-context-mcp
 ```
 
@@ -64,7 +64,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Step 1: Setting Up User Personas
+### Step 1: Setting Up User Personas 👤
 
 1. Start the server:
 ```bash
@@ -89,7 +89,7 @@ streamlit run app.py
    - "My favorite programming language is Python"
    - "I enjoy hiking on weekends"
 
-### Step 2: Connecting with Claude Desktop
+### Step 2: Connecting with Claude Desktop 🤖
 
 1. Install the MCP server in Claude Desktop:
 ```bash
@@ -108,7 +108,7 @@ python mcp_server.py
    - "Show me [user]'s information"
    - "Tell me about [user]"
 
-### Storage Configuration
+### 💾 Storage Configuration
 
 1. Create a data directory for storing persona information:
 ```bash
@@ -132,7 +132,7 @@ data/
 chown -R $(whoami):$(whoami) data/
 ```
 
-## API Endpoints
+## 🔌 API Endpoints
 
 The MCP server provides the following endpoints:
 
@@ -140,7 +140,7 @@ The MCP server provides the following endpoints:
 - `POST /mcp/persona/{user_id}` - Update persona information (Coming soon)
 - `DELETE /mcp/persona/{user_id}/{fact_index}` - Delete specific persona facts (Coming soon)
 
-## Data Structure
+## 📊 Data Structure
 
 Persona facts are stored in the following format:
 ```json
@@ -151,14 +151,14 @@ Persona facts are stored in the following format:
 }
 ```
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Support
+## 💬 Support
 
 For support, please open an issue in the GitHub repository or contact the maintainers. 
