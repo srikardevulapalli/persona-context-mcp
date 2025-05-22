@@ -1,0 +1,30 @@
+[
+  {
+    "category": "other",
+    "key": "attribute",
+    "value": "to swim",
+    "description": "User neutral to swim",
+    "timestamp": "2025-05-21T12:05:26.542138"
+  },
+  {
+    "category": "diet_nutrition",
+    "key": "favorite_cuisines",
+    "value": "indian food",
+    "description": "User likes indian food",
+    "timestamp": "2025-05-21T12:05:34.787034"
+  },
+  {
+    "category": "health_wellness",
+    "key": "medical_conditions",
+    "value": "i am a diabetic",
+    "description": "User neutral i am a diabetic",
+    "timestamp": "2025-05-21T12:05:48.223326"
+  },
+  {
+    "category": "other",
+    "key": "attribute",
+    "value": "i have a ford endeavor",
+    "description": "User neutral i have a ford endeavor",
+    "timestamp": "2025-05-21T12:06:04.988339"
+  }
+]
