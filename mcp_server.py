@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 import json
 import os
-from typing import List, Dict, Optional, Union
+from typing import List, Dict, Optional
 
 
 

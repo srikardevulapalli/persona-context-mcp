@@ -64,6 +64,21 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### 🔑 Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```bash
+# OpenAI API Key (required for AI features)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Optional: Server Configuration
+HOST=0.0.0.0
+PORT=5002
+```
+
+Replace `your_openai_api_key_here` with your actual OpenAI API key. You can get an API key from the [OpenAI Platform](https://platform.openai.com/api-keys).
+
 ### Step 1: Setting Up User Personas 👤
 
 1. Start the server:
