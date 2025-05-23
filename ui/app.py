@@ -9,6 +9,8 @@ import hashlib
 import base64
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
+from openai import OpenAI
+
 
 # Page config must be the first Streamlit command
 st.set_page_config(
@@ -348,15 +350,16 @@ client = None
 def init_openai_client():
     """Initialize the OpenAI client."""
     global client
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
+    # api_key = os.getenv("OPENAI_API_KEY")
+    openai.api_key = st.secrets["api_keys"]["openai"]
+    if not openai.api_key:
         st.warning("OPENAI_API_KEY not set. Please set it in your environment variables.")
         return
     
     try:
-        client = openai.OpenAI(api_key=api_key)
+        # openai.api_key = openai.OpenAI(api_key=openai.api_key)
         # Test the API key with a simple call
-        response = client.chat.completions.create(
+        response = openai.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": "test"}],
             max_tokens=5
@@ -478,12 +481,17 @@ def delete_persona_fact(user_id: str, fact_index: int) -> bool:
 
 def categorize_fact(fact_text: str) -> dict:
     """Use GPT-4 to categorize a fact."""
+    openai.api_key = st.secrets["api_keys"]["openai"]
+    client = OpenAI(api_key=st.secrets["api_keys"]["openai"])
+
+    # api_key = os.getenv("OPENAI_API_KEY")
     if not client:
         init_openai_client()
         if not client:
             return None
     
     try:
+        st.success("Checkpoint to categorize fact")
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
