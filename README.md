@@ -79,6 +79,15 @@ PORT=5002
 
 Replace `your_openai_api_key_here` with your actual OpenAI API key. You can get an API key from the [OpenAI Platform](https://platform.openai.com/api-keys).
 
+**Note:**  
+For local development, you must create a `.streamlit/secrets.toml` file to store your OpenAI API key for the Streamlit UI.  
+**Do not commit this file to version control.** It is already included in `.gitignore` for your safety.
+
+Example `.streamlit/secrets.toml`:
+```toml
+OPENAI_API_KEY = "your_openai_api_key_here"
+```
+
 ### Step 1: Setting Up User Personas 👤
 
 1. Start the server:
